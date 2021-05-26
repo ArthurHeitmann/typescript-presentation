@@ -1,0 +1,158 @@
+:root {
+  font-size: 1.2rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  box-sizing: border-box;
+  color: #e4e4e4;
+  font-family: "Nunito", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  scrollbar-color: #e4e4e4a6 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(228, 228, 228, 0.72);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e4e4e4;
+}
+
+button {
+  cursor: pointer;
+}
+
+.transparentButton {
+  position: relative;
+  --dim: 100%;
+  --hover-bg: #ffffff1a;
+  --active-bg: #ffffff40;
+}
+.transparentButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 50%;
+  margin-top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: var(--dim);
+  height: var(--dim);
+  background-color: unset;
+  border-radius: 50%;
+  transition: background-color 0.25s ease;
+}
+.transparentButton:hover::before, .transparentButton:focus-visible::before {
+  background-color: var(--hover-bg);
+}
+.transparentButton:active::before {
+  background-color: var(--active-bg);
+}
+
+body {
+  background: #121212;
+  width: min(95vw, 40rem);
+  margin: 1rem auto;
+}
+body.tmpNoTransition * {
+  transition: none !important;
+}
+
+a {
+  text-decoration: none;
+  font-size: inherit;
+  color: lightcoral;
+  transition: filter 0.25s ease;
+}
+a:hover {
+  filter: brightness(1.25);
+}
+
+h1, .generatorWrapper > :is(.top, .bot) {
+  user-select: none;
+}
+
+.generatorWrapper {
+  border: 1px solid #393939;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+.generatorWrapper > :is(.top, .bot) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.generatorWrapper > .top {
+  border-bottom: 1px solid #393939;
+  padding: 0.5rem;
+}
+.generatorWrapper > .top .switchable {
+  display: flex;
+}
+.generatorWrapper > .top .switchable button {
+  min-height: 2rem;
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  background-color: #333333;
+  transition: color, background-color, border-color;
+  transition-duration: 0.25s;
+}
+.generatorWrapper > .top .switchable button:first-child {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.generatorWrapper > .top .switchable button:last-child {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.generatorWrapper > .top .switchable button:hover, .generatorWrapper > .top .switchable button:focus-visible {
+  background: #555555;
+  outline: none;
+}
+.generatorWrapper > .top .switchable button:active {
+  background: rgba(226, 74, 74, 0.66);
+}
+.generatorWrapper > .top .switchable button.selected {
+  background: #e24a4a;
+}
+.generatorWrapper > .top #reloadBtn {
+  width: 1.5rem;
+  height: 1.5rem;
+  --dim: 2.25rem;
+}
+.generatorWrapper > .top #reloadBtn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.generatorWrapper > .top #reloadBtn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.generatorWrapper > .top .factType {
+  margin-right: auto;
+}
+.generatorWrapper > .bot {
+  border-top: 1px solid #393939;
+  min-height: 3rem;
+  padding: 0 1rem;
+}
+.generatorWrapper > .mid {
+  min-height: 10rem;
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */
