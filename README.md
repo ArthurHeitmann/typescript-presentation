@@ -27,21 +27,21 @@ npm install --save-dev typescript
 [npx] tsc --init
 ```
 
-```json
+```javascript
 /* Working tsconfig.json */
 {
 	"compilerOptions": {
 		/* Visit https://aka.ms/tsconfig.json to read more about this file */
 
-		"target": "esnext",									/* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
-		"module": "ESNext",									/* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
-		"lib": [											/* Specify library files to be included in the compilation. */
+		"target": "esnext",								/* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+		"module": "ESNext",								/* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+		"lib": [									/* Specify library files to be included in the compilation. */
 			"ESNext",
 			"DOM"
 		],
-		"sourceMap": true,									/* Generates corresponding '.map' file. */
-		// "outDir": "./",									/* Redirect output structure to the directory. */
-		"strict": true,										/* Enable all strict type-checking options. */
+		"sourceMap": true,								/* Generates corresponding '.map' file. */
+		// "outDir": "./",								/* Redirect output structure to the directory. */
+		"strict": true,									/* Enable all strict type-checking options. */
 		"strictNullChecks": false,
 		"noImplicitAny": true,								/* Raise error on expressions and declarations with an implied 'any' type. */
 		"esModuleInterop": true								/* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
@@ -63,7 +63,7 @@ npm install --save-dev live-server
 
 The following is also optional. 2 scripts inside the package.json
 
-```json
+```javascript
 {
 	/* ... */
 	"scripts": {
